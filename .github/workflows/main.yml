@@ -31,12 +31,11 @@ jobs:
         BROKER_LOGIN: ${{ secrets.BROKER_LOGIN }}
         BROKER_PASSWORD: ${{ secrets.BROKER_PASSWORD }}
 
-    - name: Commit and push changes
-      run: |
-        git config --local user.name "GitHub Action"
-        git config --local user.email "actions@github.com"
-        git add index.html
-        git commit -m "auto-update of html page"
-        git push
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Commit and Push
+      uses: offensive-vk/auto-commit-push@v5
+      with:
+        name: 'GitHub Action'
+        email: 'actions@github.co'
+        message: 'auto-update of html page'
+        branch: main
+        github-token: ${{ secrets.TOKEN }}
