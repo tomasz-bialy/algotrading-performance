@@ -31,11 +31,7 @@ jobs:
         BROKER_LOGIN: ${{ secrets.BROKER_LOGIN }}
         BROKER_PASSWORD: ${{ secrets.BROKER_PASSWORD }}
 
-    - name: Commit and Push
-      uses: offensive-vk/auto-commit-push@v5
+    - name: Commit & Push changes
+      uses: actions-js/push@master
       with:
-        name: 'GitHub Action'
-        email: 'actions@github.co'
-        message: 'auto-update of html page'
-        branch: main
-        github-token: ${{ secrets.TOKEN2 }}
+        github_token: ${{ secrets.TOKEN2 }}
