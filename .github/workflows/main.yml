@@ -38,4 +38,4 @@ jobs:
         email: 'actions@github.co'
         message: 'auto-update of html page'
         branch: main
-        github-token: ${{ secrets.TOKEN }}
+        github-token: ${{ secrets.TOKEN2 }}
