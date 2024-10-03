@@ -174,12 +174,13 @@ html_template = f"""
         <div class="section algorithm-info">
             <h2>Trading Algorithm</h2>
             <p>
-            The performance metrics displayed here reflect the live results of my trading algorithm, which is actively managing my real capital. These 
-            results are updated daily based on actual trades made by the algorithm through a direct connection to a brokerage account.
+            The performance data presented here is based on real trades executed by my trading algorithm, 
+            which operates with actual capital in a live market environment. It connects directly to my 
+            brokerage account, and its performance metrics are automatically updated each day.
             </p>
             <p>
-            For comparison, the algorithm's performance is measured against a benchmark, which is a major stock index in the same market. 
-            The benchmark follows a passive 'buy-and-hold' strategy, where the index's stocks are simply held without trading.
+            The algorithm’s performance is benchmarked against a leading stock index in the same market. 
+            The comparison is based on a ‘buy-and-hold’ strategy, where the index’s stocks are held without trading.
             </p>
             <p>Author: Tomasz Bialy (<a href="https://www.linkedin.com/in/tomasz-bialy/" target="_blank">LinkedIn profile</a>)</p>
         </div>
