@@ -3,9 +3,6 @@ name: page update
 on:
   schedule:
     - cron: '0 1 * * 2-6'
-  push:
-    branches:
-      - main
 
 jobs:
   build:
