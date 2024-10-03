@@ -138,7 +138,7 @@ html_template = f"""
             margin-bottom: 10px;
         }}
         .algorithm-info {{
-            width: 930px; 
+            width: 700px; 
         }}
         table {{
             width: 700px;
