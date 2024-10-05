@@ -69,7 +69,7 @@ class DataLoader:
         response = requests.get(url)
         data = response.json()[0]["data"]
         df = pd.DataFrame({
-            "date": [date.fromtimestamp(item["t"]) for item in data],
+            "date": pd.to_datetime([item["t"] for item in data], unit="s", utc=True).tz_convert('Europe/Warsaw'),
             "index_close": [item["c"] for item in data]
         })
         df.set_index("date", inplace=True)
