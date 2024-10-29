@@ -21,10 +21,9 @@ loader = DataLoader(
     to_date=date(2050, 1, 1),
 )
 df_index = loader.fetch_index()
-print(df_index)
 
 df = pd.DataFrame(history['returnData'])
-df['date'] = pd.to_datetime(df['close_timeString'].str.replace('CEST', '').str.strip(), format='%a %b %d %H:%M:%S %Y')
+df['date'] = pd.to_datetime(df['close_timeString'].str.replace('CEST', '').str.replace('CET', '').str.strip(), format='%a %b %d %H:%M:%S %Y')
 df['date'] = df['date'].dt.date
 df['log_return'] = np.log(df['close_price'] / df['open_price'])
 
